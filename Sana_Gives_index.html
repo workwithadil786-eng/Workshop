@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Gives</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(180deg,#2b0008,#4a0014);color:#fff}
+header{padding:24px;text-align:center;background:rgba(0,0,0,.2);position:sticky;top:0;backdrop-filter:blur(8px)}
+h1{margin:0;color:#ffd6e7}
+.search{margin:18px auto;max-width:420px}
+.search input{width:100%;padding:12px 16px;border-radius:30px;border:none;background:#ffd6e7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding:30px}
+.card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:22px;overflow:hidden}
+.imgph{height:260px;display:flex;align-items:center;justify-content:center;background:#6b1830;font-size:70px}
+.content{padding:18px}
+.price{font-size:28px;color:#ffd36e;font-weight:bold}
+button{background:#ff8fb1;color:#420015;border:none;padding:12px 18px;border-radius:25px;font-weight:bold;cursor:pointer}
+footer{padding:30px;text-align:center}
+.small{opacity:.85;line-height:1.6}
+</style>
+<script>
+function searchProducts(){
+ let q=document.getElementById('q').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>{
+   c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+ });
+}
+function buy(name,price){
+ alert("Order: "+name+"\nPrice: ₹"+price+
+ "\n\nPay via UPI:\n7003686507@fam\n\nAfter payment, send your payment screenshot to Sana Gives for confirmation.");
+}
+</script>
+</head>
+<body>
+<header>
+<h1>🌹 Sana Gives</h1>
+<p>Luxury Gifts & Bags</p>
+<div class="search">
+<input id="q" onkeyup="searchProducts()" placeholder="🔍 Search bags...">
+</div>
+</header>
+
+<section class="grid">
+<div class="card">
+<div class="imgph">👜</div>
+<div class="content">
+<h2>Pink Pearl Bow Handbag</h2>
+<div class="price">₹999</div>
+<p class="small">
+Elegant pastel pink handbag with a sheer ribbon bow and pearl handle.
+• Premium PU leather
+• Magnetic flap closure
+• Adjustable shoulder strap
+• Fits phone, wallet & cosmetics
+• Perfect for gifts, parties and everyday outings.
+</p>
+<button onclick="buy('Pink Pearl Bow Handbag',999)">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<div class="imgph">👜</div>
+<div class="content">
+<h2>Cream Shoulder Bag</h2>
+<div class="price">₹1799</div>
+<p class="small">
+Minimalist cream shoulder bag with a knotted handle and teddy charm.
+• Premium vegan leather
+• Smooth zip closure
+• Spacious compartment
+• Elegant gold-tone hardware
+• Great for college, office and casual outings.
+</p>
+<button onclick="buy('Cream Shoulder Bag',1799)">Buy Now</button>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>Checkout</h2>
+<p>UPI ID</p>
+<h3>7003686507@fam</h3>
+<p class="small">After completing payment, send your payment screenshot to Sana Gives to confirm your order.</p>
+</footer>
+</body>
+</html>
