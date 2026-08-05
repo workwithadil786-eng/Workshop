@@ -1,2 +1,0 @@
-# Workshop
-For money
