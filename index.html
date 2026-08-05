@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana Gives</title>
+<style>
+body{margin:0;background:linear-gradient(180deg,#2b0010,#4b0018);font-family:Arial,sans-serif;color:#fff}
+header{padding:20px;text-align:center;background:rgba(0,0,0,.25);position:sticky;top:0}
+h1{color:#ffd3e2}
+.search{max-width:450px;margin:18px auto}
+.search input{width:100%;padding:14px;border-radius:30px;border:none;background:#ffd3e2}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding:28px}
+.card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:18px;overflow:hidden}
+.card img{width:100%;height:320px;object-fit:cover}
+.content{padding:18px}
+.price{font-size:30px;color:#ffd86a;font-weight:bold}
+button{padding:12px 18px;border:none;border-radius:30px;background:#ff8fb3;font-weight:bold;cursor:pointer}
+footer{padding:30px;text-align:center;background:rgba(0,0,0,.2)}
+.badge{display:inline-block;background:#ff5c8a;padding:6px 12px;border-radius:20px;margin-bottom:10px}
+.small{opacity:.9;line-height:1.6}
+</style>
+<script>
+function buy(name,price){
+alert("Order: "+name+"\nPrice: ₹"+price+
+"\n\nPay to UPI ID:\n7003686507@fam\n\nAfter payment, send the payment screenshot to Sana Gives for order confirmation.");
+}
+</script>
+</head>
+<body>
+<header>
+<h1>🌹 Sana Gives</h1>
+<p>Luxury Gifts & Bags</p>
+<div class="search"><input placeholder="🔍 Search products (demo)"></div>
+</header>
+
+<section class="grid">
+<div class="card">
+<img src="images/pink-bag.jpg" alt="Pink Pearl Bow Bag">
+<div class="content">
+<div class="badge">New Arrival</div>
+<h2>Pink Pearl Bow Bag</h2>
+<div class="price">₹999</div>
+<p class="small">Elegant pastel pink handbag with pearl handle, ribbon bow, adjustable strap and premium PU leather. Perfect for gifting, parties and daily outings.</p>
+<button onclick="buy('Pink Pearl Bow Bag',999)">Buy Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="images/cream-bag.jpg" alt="Cream Teddy Shoulder Bag">
+<div class="content">
+<div class="badge">Best Seller</div>
+<h2>Cream Teddy Shoulder Bag</h2>
+<div class="price">₹1799</div>
+<p class="small">Premium cream shoulder bag featuring a knotted handle, teddy charm, spacious compartment and elegant gold hardware.</p>
+<button onclick="buy('Cream Teddy Shoulder Bag',1799)">Buy Now</button>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>Checkout</h2>
+<p>Pay using UPI</p>
+<h3>7003686507@fam</h3>
+<p>After payment, send your payment screenshot to confirm your order.</p>
+</footer>
+</body>
+</html>
